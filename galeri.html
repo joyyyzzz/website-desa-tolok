@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galeri - Profil Desa Tolok</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="style.css" rel="stylesheet" />
+
+    <style>
+      .gallery-item {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+        overflow: hidden; /* Memastikan gambar tetap di dalam card */
+      }
+      .gallery-item img {
+        transition: transform 0.3s ease;
+        height: 250px; /* Menyamakan tinggi gambar */
+        object-fit: cover; /* Mencegah gambar penyet */
+      }
+      .gallery-item:hover {
+        transform: scale(1.03); /* Sedikit membesar saat disentuh */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+      .gallery-item:hover img {
+        transform: scale(1.1); /* Efek zoom pada gambar di dalam card */
+      }
+      /* Style untuk tombol close di modal */
+      .modal-header .btn-close {
+        filter: invert(1) grayscale(100%) brightness(200%);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bolder text-success" href="index.html"> Desa Tolok </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Beranda</a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Profil
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="profil-sejarah.html">Tentang & Sejarah</a></li>
+                <li><a class="dropdown-item" href="profil-pemerintahan.html">Pemerintahan</a></li>
+                <li><a class="dropdown-item" href="profil-demografi.html">Data Demografi</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="potensi.html">Potensi</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active fw-bold" href="galeri.html">Galeri</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container my-5">
+      <h1 class="display-4 fw-bolder text-center">Galeri Desa Tolok</h1>
+      <p class="fs-5 text-muted text-center col-md-8 mx-auto mb-5">
+        Momen dan pemandangan yang terekam di Desa Tolok. Klik gambar untuk melihat lebih besar.
+      </p>
+
+      <div class="row g-4">
+        
+        <div class="col-lg-4 col-md-6">
+          <a href="#" class="card shadow-sm gallery-item" 
+             data-bs-toggle="modal" 
+             data-bs-target="#galleryModal" 
+             data-bs-image-src="static/waruga1.jpg"
+             data-bs-image-caption="Waruga mawale Tolok">
+            <img src="static/waruga1.jpg" class="card-img-top" alt="Pemandangan Sawah">
+          </a>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <a href="#" class="card shadow-sm gallery-item" 
+             data-bs-toggle="modal" 
+             data-bs-target="#galleryModal" 
+             data-bs-image-src="static/kerjabakti.jpg"
+             data-bs-image-caption="Kegiatan kerja bakti warga">
+            <img src="static/kerjabakti.jpg" class="card-img-top" alt="Kerja Bakti">
+          </a>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <a href="#" class="card shadow-sm gallery-item" 
+             data-bs-toggle="modal" 
+             data-bs-target="#galleryModal" 
+             data-bs-image-src="static/jagung2.jpg"
+             data-bs-image-caption="Menjemur hasil panen jagung">
+            <img src="static/jagung2.jpg" class="card-img-top" alt="Produk UMKM">
+          </a>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <a href="#" class="card shadow-sm gallery-item" 
+             data-bs-toggle="modal" 
+             data-bs-target="#galleryModal" 
+             data-bs-image-src="static/kantordesa.jpg"
+             data-bs-image-caption="Kunjungan dari Polsek Tompaso">
+            <img src="static/kantordesa.jpg" class="card-img-top" alt="Kantor Desa">
+          </a>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <a href="#" class="card shadow-sm gallery-item" 
+             data-bs-toggle="modal" 
+             data-bs-target="#galleryModal" 
+             data-bs-image-src="static/anakanak bermain.jpg"
+             data-bs-image-caption="Anak-anak bermain di sore hari">
+            <img src="static/anakanak bermain.jpg" class="card-img-top" alt="Anak-anak bermain">
+          </a>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <a href="#" class="card shadow-sm gallery-item" 
+             data-bs-toggle="modal" 
+             data-bs-target="#galleryModal" 
+             data-bs-image-src="static/sosialisasitk tolok.jpg"
+             data-bs-image-caption="Sosialisasi di Tk GMIM Dorkas Tolok">
+            <img src="static/sosialisasitk tolok.jpg" class="card-img-top" alt="Hasil panen">
+          </a>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <a href="#" class="card shadow-sm gallery-item" 
+             data-bs-toggle="modal" 
+             data-bs-target="#galleryModal" 
+             data-bs-image-src="static/homeschooling.jpg"
+             data-bs-image-caption="homeschooling">
+            <img src="static/homeschooling.jpg" class="card-img-top" alt="Hasil panen">
+          </a>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <a href="#" class="card shadow-sm gallery-item" 
+             data-bs-toggle="modal" 
+             data-bs-target="#galleryModal" 
+             data-bs-image-src="static/phbs.jpg"
+             data-bs-image-caption="Sosialisasi di Sd Gmim Tolok">
+            <img src="static/phbs.jpg" class="card-img-top" alt="Hasil panen">
+          </a>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <a href="#" class="card shadow-sm gallery-item" 
+             data-bs-toggle="modal" 
+             data-bs-target="#galleryModal" 
+             data-bs-image-src="static/pemandangan1.jpg"
+             data-bs-image-caption="Pemandangan indah Desa Tolok">
+            <img src="static/pemandangan1.jpg" class="card-img-top" alt="Hasil panen">
+          </a>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <a href="#" class="card shadow-sm gallery-item" 
+             data-bs-toggle="modal" 
+             data-bs-target="#galleryModal" 
+             data-bs-image-src="static/pemeriksaangratis.jpg"
+             data-bs-image-caption="Pemeriksaan Gratis">
+            <img src="static/pemeriksaangratis.jpg" class="card-img-top" alt="Hasil panen">
+          </a>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <a href="#" class="card shadow-sm gallery-item" 
+             data-bs-toggle="modal" 
+             data-bs-target="#galleryModal" 
+             data-bs-image-src="static/bersihkolombipemuda.jpg"
+             data-bs-image-caption="Hasil Tangkapan Keong Sawah bersama Pemuda">
+            <img src="static/bersihkolombipemuda.jpg" class="card-img-top" alt="Hasil panen">
+          </a>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <a href="#" class="card shadow-sm gallery-item" 
+             data-bs-toggle="modal" 
+             data-bs-target="#galleryModal" 
+             data-bs-image-src="static/sd inprestolok.jpg"
+             data-bs-image-caption="Pemandangan indah Desa Tolok">
+            <img src="static/sd inprestolok.jpg" class="card-img-top" alt="Hasil panen">
+          </a>
+        </div>
+        
+        </div>
+    </div>
+    <footer class="bg-light text-center text-muted py-3">
+      <div class="container">
+        <img
+          src="static/logo_minahasa.jpg"
+          alt="Logo Kabupaten Minahasa"
+          style="height: 50px" class="mb-2"
+        />
+        <p class="mb-0">
+          <strong>© 2025 Pemerintah Desa Tolok</strong><br />
+          Kecamatan Tompaso, Kabupaten Minahasa, Sulawesi Utara
+        </p>
+        <p class="mt-2" style="font-size: 0.9rem;">
+            Website ini dibuat oleh Mahasiswa KKT-144 Posko Tolok Universitas SamRatulangi 2025
+        </p>
+      </div>
+    </footer>
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark text-white">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-0 text-center">
+            <img src="" class="img-fluid" id="modalImage" alt="Gambar Galeri">
+            <p id="modalCaption" class="mt-3 mb-0 p-3"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Ambil elemen modal
+      const galleryModal = document.getElementById('galleryModal');
+      
+      // Dengarkan event 'show.bs.modal' (saat modal akan ditampilkan)
+      galleryModal.addEventListener('show.bs.modal', event => {
+        // 'event.relatedTarget' adalah link <a> yang diklik
+        const triggerElement = event.relatedTarget;
+        
+        // Ambil path gambar besar dari atribut 'data-bs-image-src'
+        const imageSrc = triggerElement.getAttribute('data-bs-image-src');
+        
+        // Ambil caption gambar dari atribut 'data-bs-image-caption'
+        const imageCaption = triggerElement.getAttribute('data-bs-image-caption');
+        
+        // Temukan elemen <img> dan <p> di dalam modal
+        const modalImage = galleryModal.querySelector('#modalImage');
+        const modalCaption = galleryModal.querySelector('#modalCaption');
+        
+        // Set 'src' gambar dan 'text' caption di dalam modal
+        modalImage.src = imageSrc;
+        modalCaption.textContent = imageCaption;
+      });
+    </script>
+
+  </body>
+</html>

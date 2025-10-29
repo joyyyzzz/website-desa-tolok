@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Demografi - Profil Desa Tolok</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bolder text-success" href="index.html"> Desa Tolok </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html"
+                >Beranda</a
+              >
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle active fw-bold"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Profil
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="profil-sejarah.html">Tentang & Sejarah</a></li>
+                <li><a class="dropdown-item" href="profil-pemerintahan.html">Pemerintahan</a></li>
+                <li><a class="dropdown-item active" href="profil-demografi.html">Data Demografi</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="potensi.html">Potensi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="galeri.html">Galeri</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container my-5" style="min-height: 60vh;">
+      <h1 class="display-4 fw-bolder">Data Demografi Desa Tolok</h1>
+      <p class="fs-5 text-muted col-md-8">
+        Ringkasan data kependudukan Desa Tolok berdasarkan data terakhir pada Tahun 2025.
+      </p>
+      
+      <div class="row mt-5">
+        <div class="col-lg-6">
+          <h2 class="h4">Ringkasan Kependudukan</h2>
+          <ul class="list-group list-group-flush fs-5 shadow-sm rounded">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <strong>Luas Wilayah</strong>
+              <span class="badge bg-success rounded-pill">158 Hektar</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <strong>Jumlah Penduduk</strong>
+              <span class="badge bg-primary rounded-pill">589 Jiwa</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <strong>Jumlah Kepala Keluarga (KK)</strong>
+              <span class="badge bg-primary rounded-pill">210 KK</span>
+            </li>
+              <li class="list-group-item">
+              <div class="d-flex justify-content-between align-items-center">
+                <strong>Jumlah Bangunan</strong>
+                <button
+                  class="btn btn-info btn-sm text-white fw-bolder dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#bangunanDetail"
+                  aria-expanded="false"
+                  aria-controls="bangunanDetail"
+                >
+                  179 Bangunan
+                </button>
+              </div>
+
+              <div class="collapse mt-2" id="bangunanDetail">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Jaga I <span class="badge bg-primary rounded-pill">48</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Jaga II <span class="badge bg-success rounded-pill">62</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Jaga III <span class="badge bg-secondary rounded-pill">69</span>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+        <div class="col-lg-6 mt-5 mt-lg-0">
+          <h2 class="h4">Mata Pencaharian</h2>
+          <table class="table table-hover table-striped shadow-sm rounded overflow-hidden">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Jenis Pekerjaan</th>
+                <th scope="col">Jumlah</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Petani</td>
+                <td>162 Orang</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Pegawai Negeri Sipil (PNS)</td>
+                <td>24 Orang</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Karyawan Swasta</td>
+                <td>35 Orang</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>TNI</td>
+                <td>3 Orang</td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td>Polri</td>
+                <td>2 Orang</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+    <footer class="bg-light text-center text-muted py-3">
+      <div class="container">
+        <img
+          src="static/logo_minahasa.jpg"
+          alt="Logo Kabupaten Minahasa"
+          style="height: 50px" class="mb-2"
+        />
+
+        <p class="mb-0">
+          <strong>© 2025 Pemerintah Desa Tolok</strong><br />
+          Kecamatan Tompaso, Kabupaten Minahasa, Sulawesi Utara
+        </p>
+        
+        <p class="mt-2" style="font-size: 0.9rem;">
+            Website ini dibuat oleh Mahasiswa KKT-144 Posko Tolok Universitas SamRatulangi 2025
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
